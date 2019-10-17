@@ -8,7 +8,7 @@ class LanguagePack::Installers::HerokuRubyInstaller
   BASE_URL = LanguagePack::Base::VENDOR_URL
 
   def initialize(stack)
-    @fetcher = LanguagePack::Fetcher.new(BASE_URL, stack)
+    @fetcher = LanguagePack::Fetcher.new(BASE_URL, 'heroku-16')
   end
 
   def fetch_unpack(ruby_version, install_dir, build = false)
@@ -23,4 +23,3 @@ class LanguagePack::Installers::HerokuRubyInstaller
     end
   end
 end
-
